@@ -1,0 +1,133 @@
+@media only screen and (max-width: 1200px){
+	.header{
+		margin-left: 120px;
+	}
+
+	.header a{
+		font-size: 16px;
+	}
+
+	.logo img{
+		text-align: center;
+	}
+
+	.header{
+		max-width: 95%;
+	}
+
+	.header .menu-item a{
+		font-size: 20px;
+		padding: 10px;
+	}
+
+	.header .main-small-info a{
+		margin-left: 120px;
+		font-size: 30px;
+	}
+
+	.header .main-title a{
+		text-align: right;
+		font-size: 12px;
+	}
+
+	.main-image{
+		left: calc(100% - 400px);
+	}
+
+	.body{
+		padding: 250px 0 290px;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.order-form {
+		margin: 0 auto;
+	}
+	.button {
+		margin: 0;
+		width: 150px;
+		height: 30px;
+		font-size: 10px;
+		margin-right: auto;
+		margin-left: 18px
+	}
+	.footer .container {
+		justify-content: space-around;
+	}
+	.header {
+		margin-left: 35px;
+	}
+	.menu {
+		margin-left: 5px;
+	}
+	.main-image {
+		width: 200px;
+		top: -5px;
+		left: calc(100% - 185px);
+	}
+	.main-small-info {
+		font-size: 10px;
+		margin-left: 17px;
+		padding: 5px;
+	}
+	.main-title {
+		padding-top: 10px;
+		font-size: 30px;
+		margin-left: 19px;
+		height: 30px;
+	}
+	.main-text {
+		font-size: 10px;
+		margin-right: auto;
+		margin-left: 18px;
+	}
+	.main-action {
+		display: flex;
+		justify-content: center;
+	}
+	.common-title {
+		font-family: Merriweather, sans-serif;
+		font-size: 44px;
+		line-height: 48px;
+		text-align: center;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+		padding: 35px 0 0;
+	}
+	.menu-item {
+		margin-right: 30px;
+	}
+	.cart.show {align-items: flex-start;}
+	
+	.social-icons {
+		display: flex;
+		justify-content: left;
+		margin-left: 110px;
+		position: absolute;
+		top: 50px;
+	}
+	 
+	.social-icons a {
+		margin: 0 10px;
+	}
+	 
+	.social-icons img {
+		width: 32px;
+		height: 32px;
+		padding: 1px;
+		transition: transform 0.3s;
+	}
+	 
+	.social-icons a:hover img {
+		transform: scale(1.2);
+	}
+
+}
+
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+	.main-image {
+		width: 230px;
+		top: 0px;
+		left: calc(100% - 240px)
+	}
+}

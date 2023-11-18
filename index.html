@@ -1,0 +1,2258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Бургерная ВЫШКА</title>
+	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/adaptive.css">
+	<link rel="apple-touch-icon" href="images/original.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/76x76.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/120x120.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/152x152.png">
+</head>
+<body>
+
+	<div class="social-icons">
+		<a href="https://vk.com/vishkaeda" target="_blank">
+			<img src="./images/СоцСети/vk.png" alt="Vkontakte">
+		</a>
+		<a href="https://t.me/vishkaeda" target="_blank">
+			<img src="./images/СоцСети/telegram.png" alt="Telegram">
+		</a>
+		<a href="https://www.instagram.com/vishka.eda" target="_blank">
+			<img src="./images/СоцСети/instagram.png" alt="Instagram">
+		</a>
+	</div>
+	
+	<button class="cart-button">
+		<span>
+			<div class="cart-count">0</div>
+			<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z" fill="#191411"></path>
+			</svg>
+		</span>
+	</button>
+	<div id="clonesContainer"></div>
+
+	<div class="cart">
+		<div class="cart-body">
+			<h2>Ваш заказ <span></span></h2>
+			<div class="cart-items">
+			</div>
+		</div>
+		<div class="cart-shadow"></div>
+	</div>
+
+
+	<section class="main">
+		<header class="header">
+			<div class="container">
+				<div class="logo">
+					<img src="images/vishka-logo.png" alt="Logo">
+				</div>
+			</div>
+		</header>
+		<section class="main-content">
+			<div class="container">
+				<div class="main-info">
+					<span class="main-small-info">НОВИНКА</span>
+					<h1 class="main-title">УФО БУРГЕР</h1>
+					<p class="main-text">
+						UFO-бургер с сюрпризом <br />
+						внутри мороженое.<br />
+						Встречайте новый вкус <br/>
+						космических просторов</p>
+					<div class="main-action">
+						<button class="button" id="main-action-button">Смотреть меню</button>
+					</div>
+				</div>
+				<img class="main-image" src="images/main_ufo.png" alt="big burger">
+			</div>
+		</section>
+	</section>
+	<section class="products" id="products">
+		<div class="container">
+			<div class="products-title common-title">
+				наше меню
+			</div>
+			<div class="d-flex tabs-controls">
+				<button class="btn border tab-control" data-id="1">БУРГЕРЫ</button>
+				<button class="btn border tab-control" data-id="13">UFO БУРГЕРЫ</button>
+				<button class="btn border tab-control" data-id="2">СЭНДВИЧИ</button>
+				<button class="btn border tab-control" data-id="3">ДЕТСКИЕ БУРГЕРЫ</button>
+				<button class="btn border tab-control" data-id="4">ФРАЙСЫ</button>
+				<button class="btn border tab-control" data-id="5">ПИЦЦЫ</button>
+				<button class="btn border tab-control" data-id="11">МИНИ-ПИЦЦЫ</button>
+				<button class="btn border tab-control" data-id="6">СНЭКИ</button>
+				<button class="btn border tab-control" data-id="7">НАПИТКИ</button>
+				<button class="btn border tab-control" data-id="8">СМУЗИ</button>
+				<button class="btn border tab-control" data-id="9">ФИРМЕНННЫЕ НАПИТКИ</button>
+				<button class="btn border tab-control" data-id="10">РАЗЛИВНЫЕ НАПИТКИ</button>
+				<button class="btn border tab-control" data-id="12">АВТОРСКИЕ ЧАИ</button>
+			</div>
+			<div class="tabs">
+				<div class="tab tab-1">
+					<div class="products-items">
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Бургеры/1.png" alt="burger-1">
+							</div>
+							<div class="products-item-title">
+								НЬЮ-СКУЛЛ
+							</div>
+							<div class="products-item-text">
+								Куриная котлета, сыр Моцарелла, луковые кольца, пекинская капуста, соус Вышка, соус Медовый, соус Sweet Chili.
+								<br/>
+								<br/>
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="1">520 ₽</div>
+									<div class="products-item-weight">340 гр</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="1" data-name="НЬЮ-СКУЛЛ" data-image="images/Бургеры/1.png" data-weight="340 гр" data-price="520">
+										<span>В корзину</span>
+										<span>
+											<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z" fill="#191411"/>
+											</svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Бургеры/2.png" alt="burger-2">
+							</div>
+							<div class="products-item-title">
+								БЕРРИ
+							</div>
+							<div class="products-item-text">
+								Говяжья котлета, сыр Чеддер, пекинская капуста, соус Вышка, соус Чесночный, джем из лесных ягод
+								<br/>
+								<br/>
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="2">510 ₽</div>
+									<div class="products-item-weight">290 гр</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="2" data-name="БЕРРИ" data-image="images/Бургеры/2.png" data-weight="290 гр" data-price="510">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Бургеры/3.png" alt="burger-3">
+							</div>
+							<div class="products-item-title">
+								ЛЕНИВЫЙ ДЖО
+							</div>
+							<div class="products-item-text">
+								Говяжий фарш, обжаренный с сыром Моцарелла и кетчупом, красный лук, пекинская капуста, соус Вышка, соус Чесночный
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="3">480 ₽</div>
+									<div class="products-item-weight">250 гр</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="3" data-name="ЛЕНИВЫЙ ДЖО" data-image="images/Бургеры/3.png" data-weight="250 гр" data-price="480">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Бургеры/4.png" alt="burger-4">
+							</div>
+							<div class="products-item-title">
+								ТОТ САМЫЙ
+							</div>
+							<div class="products-item-text">
+								Рубленая курица в соусе BBQ, глазунья, карамелизованный бекон, пекинская капуста, красный лук, соус Вышка, соус Медовый
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="4">450 ₽</div>
+									<div class="products-item-weight">260 гр</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="4" data-name="ТОТ САМЫЙ" data-image="images/Бургеры/4.png" data-weight="260 гр" data-price="450">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Бургеры/6.png" alt="burger-6">
+							</div>
+							<div class="products-item-title">
+								ЭЛЬ-ПАБЛО
+							</div>
+							<div class="products-item-text">
+								Буженина из свинины, обжаренная в соусе Шрирача и BBQ, огурцы соленые, чипсы, перец халапеньо, красный лук, пекинская капуста соус Вышка, соус Чесночный
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="5">480 ₽</div>
+									<div class="products-item-weight">320 гр</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="5" data-name="ЭЛЬ-ПАБЛО" data-image="images/Бургеры/6.png" data-weight="320 гр" data-price="480">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Бургеры/7.png" alt="burger-7">
+							</div>
+							<div class="products-item-title">
+								ЧИЛИ ЧИЗ
+							</div>
+							<div class="products-item-text">
+								Говяжья котлета, перец халапеньо, сыр Чеддер, красный лук, пекинская капуста, соус Вышка, соус Чесночный, соус Шрирача
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="6">500 ₽</div>
+									<div class="products-item-weight">280 гр</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="6" data-name="ЧИЛИ ЧИЗ" data-image="images/Бургеры/7.png" data-weight="280 гр" data-price="500">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Бургеры/8.png" alt="burger-8">
+							</div>
+							<div class="products-item-title">
+								ТВИ
+							</div>
+							<div class="products-item-text">
+								Куриная котлета в панировочных сухарях, сыр Чеддер и Паулиньо, помидор, бекон,  красный лук, пекинская капуста, соус Вышка, соус Медовый
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="7">570 ₽</div>
+									<div class="products-item-weight">320 гр</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="7" data-name="ТВИ" data-image="images/Бургеры/8.png" data-weight="320 гр" data-price="570">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Бургеры/11.png" alt="burger-11">
+							</div>
+							<div class="products-item-title">
+								BIG BRO
+							</div>
+							<div class="products-item-text">
+								2 говяжьи котлеты, сыр Чеддер, помидор, красный лук, пекинская капуста, соус Вышка
+								<br/>
+								<br/>
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="8">750 ₽</div>
+									<div class="products-item-weight">390 гр</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="8" data-name="BIG BRO" data-image="images/Бургеры/11.png" data-weight="390 гр" data-price="750">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Бургеры/12.png" alt="burger-12">
+							</div>
+							<div class="products-item-title">
+								ТЭЙСТИ
+							</div>
+							<div class="products-item-text">
+								Куриная Котлета, луковые кольца, помидор и сыр Чеддер под соусом Вышка и Медовый
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="9">460 ₽</div>
+									<div class="products-item-weight">320 гр</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="9" data-name="ТЭЙСТИ" data-image="images/Бургеры/12.png" data-weight="320 гр" data-price="460">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Бургеры/13.png" alt="burger-13">
+							</div>
+							<div class="products-item-title">
+								ВОСХОД
+							</div>
+							<div class="products-item-text">
+								Куриная котлета, сыр Чеддер, яйцо, бекон, красный лук, пекинская капуста, соус Вышка, соус Медовый
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="10">530 ₽</div>
+									<div class="products-item-weight">310 гр</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="10" data-name="ВОСХОД" data-image="images/Бургеры/13.png" data-weight="310 гр" data-price="530">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Бургеры/14.png" alt="burger-14">
+							</div>
+							<div class="products-item-title">
+								ВЫШКА
+							</div>
+							<div class="products-item-text">
+								Говяжья котлета, бекон, яйцо, сыр Чеддер, красный лук, пекинская капуста, соус Вышка, соус Чесночный
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="11">570 ₽</div>
+									<div class="products-item-weight">320 гр</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="11" data-name="ВЫШКА" data-image="images/Бургеры/14.png" data-weight="320 гр" data-price="570">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Бургеры/15.png" alt="burger-15">
+							</div>
+							<div class="products-item-title">
+								СТРАННИК
+							</div>
+							<div class="products-item-text">
+								Куриная котлета, сыр Чеддер, луковые кольца, пекинская капуста, соус Вышка, соус Медовый
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="12">450 ₽</div>
+									<div class="products-item-weight">285 гр</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="12" data-name="СТРАННИК" data-image="images/Бургеры/15.png" data-weight="285 гр" data-price="450">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Бургеры/16.png" alt="burger-16">
+							</div>
+							<div class="products-item-title">
+								ОЛД
+							</div>
+							<div class="products-item-text">
+								Говяжья котлета, помидоры, корнишоны, сыр Чеддер, красный лук, пекинская капуста, соус Вышка, соус Чесночный
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="13">530 ₽</div>
+									<div class="products-item-weight">290 гр</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="13" data-name="ОЛД" data-image="images/Бургеры/16.png" data-weight="290 гр" data-price="530">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Бургеры/17.png" alt="burger-17">
+							</div>
+							<div class="products-item-title">
+								ТОРИ
+							</div>
+							<div class="products-item-text">
+								Куриная котлета в панировке, листья нори, сыр Чеддер, помидор, пекинская капуста, соус Чесночный, соус Азиатский
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="14">480 ₽</div>
+									<div class="products-item-weight">310 гр</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="14" data-name="ТОРИ" data-image="images/Бургеры/17.png" data-weight="310 гр" data-price="480">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab tab-13">
+					<div class="products-items">
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="" alt="ufo-1">
+							</div>
+							<div class="products-item-title">
+								УФО ЯГОДНЫЙ
+							</div>
+							<div class="products-item-text">
+								Ягодное мороженое, брусничный топпинг, сахарная пудра, булочка
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="73">240 ₽</div>
+									<div class="products-item-weight"></div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="73" data-name="УФО ЯГОДНЫЙ" data-image="" data-weight="" data-price="240">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="" alt="ufo-2">
+							</div>
+							<div class="products-item-title">
+								УФО ВАНИЛЬНЫЙ
+							</div>
+							<div class="products-item-text">
+								Ванильное мороженое, сахарная пудра, булочка
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="74">240 ₽</div>
+									<div class="products-item-weight"></div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="74" data-name="УФО ВАНИЛЬНЫЙ" data-image="" data-weight="" data-price="240">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="" alt="ufo-3">
+							</div>
+							<div class="products-item-title">
+								УФО ОРЕО
+							</div>
+							<div class="products-item-text">
+								Ванильное мороженое, печенье орео, сахарная пудра, булочка
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="75">270 ₽</div>
+									<div class="products-item-weight"></div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="75" data-name="УФО ОРЕО" data-image="" data-weight="" data-price="270">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab tab-2">
+					<div class="products-items">
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Сэндвичи/Бен.png" alt="sandwich-1">
+							</div>
+							<div class="products-item-title">
+								Беннедикт
+							</div>
+							<div class="products-item-text">
+								Для этого сэндвича мы соединили куриную котлету с хрустящей корочкой, яичницу-глазунью, луковые кольца в кляре,
+								сыр Чеддер, карамелизированный бекон и фирменные соуса на свежей горячей булочке
+								<br/>
+								<br/>
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="15">610 ₽</div>
+									<div class="products-item-weight">545 гр</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="15" data-name="Беннедикт" data-image="images/Сэндвичи/Бен.png" data-weight="545 гр" data-price="610">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Сэндвичи/Биф.png" alt="sandwich-2">
+							</div>
+							<div class="products-item-title">
+								Биффстаф
+							</div>
+							<div class="products-item-text">
+								Фирменная булочка для сэндвича, говяжий стафф, обжаренный с томатами на гриле глазунья, ломтики
+								карамелизированного бекона, целых два вида сыра: Чеддер и Паулиньо.
+								<br/>
+								<br/>
+								<br/>
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="16">700 ₽</div>
+									<div class="products-item-weight">480 гр</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="16" data-name="Биффстаф" data-image="images/Сэндвичи/Биф.png" data-weight="480 гр" data-price="700">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Сэндвичи/пушкин.png" alt="sandwich-3">
+							</div>
+							<div class="products-item-title">
+								Пушкин
+							</div>
+							<div class="products-item-text">
+								Сэндвич из сочной куриной котлеты, сыров Паулиньо и Чеддер, хрустящего лука, картофеля фри, слайсов
+								свежего помидора и пекинской капусты в мягкой булочке из собственной пекарни
+							<br/>
+							<br/>
+							<br/>
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="17">500 ₽</div>
+									<div class="products-item-weight">430 гр</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="17" data-name="Пушкин" data-image="images/Сэндвичи/пушкин.png" data-weight="430 гр" data-price="500">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Сэндвичи/чикен.png" alt="sandwich-4">
+							</div>
+							<div class="products-item-title">
+								Чикен чиз
+							</div>
+							<div class="products-item-text">
+								Ароматный английский сыр Чеддер и тянущийся Паулиньо + куриное филе. 
+								А также в сэндвич входит красный лук, пекинская капуста, фирменные соуса
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="18">450 ₽</div>
+									<div class="products-item-weight">360 гр</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="18" data-name="Чикен чиз" data-image="images/Сэндвичи/чикен.png" data-weight="360 гр" data-price="450">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab tab-3">
+					<div class="products-items">
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Чукурук/чукурук олд-скулл.PNG" alt="miniburger-2">
+							</div>
+							<div class="products-item-title">
+								Детский Олд-Скулл
+							</div>
+							<div class="products-item-text">
+								Говяжья котлета, корнишоны, помидор, сыр Чеддер, пекинская капуста, соус Вышка, соус Чесночный
+								<br/>
+								<br/>
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="19">240 ₽</div>
+									<div class="products-item-weight">160 гр</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="19" data-name="Детский Олд-Скулл" data-image="images/Чукурук/чукурук олд-скулл.PNG" data-weight="160 гр" data-price="240">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+																xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+													fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Чукурук/чукурук-вышка.PNG" alt="miniburger-3">
+							</div>
+							<div class="products-item-title">
+								Детский Вышка
+							</div>
+							<div class="products-item-text">
+								Говяжья котлета, бекон, сыр Чеддер, красный лук, пекинская капуста, соус Вышка, соус Чесночный
+								<br/>
+								<br/>
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="20">260 ₽</div>
+									<div class="products-item-weight">145 гр</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="20" data-name="Детский Вышка" data-image="images/Чукурук/чукурук-вышка.PNG" data-weight="145 гр" data-price="260">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+																xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+													fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Чукурук/чукурук-странник.PNG" alt="miniburger-4">
+							</div>
+							<div class="products-item-title">
+								Детский Странник
+							</div>
+							<div class="products-item-text">
+								Куриная котлета, луковые кольца, сыр Чеддер, пекинская капуста, соус Вышка, соус Медовый
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="21">200 ₽</div>
+									<div class="products-item-weight">140 гр</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="21" data-name="Детский Странник" data-image="images/Чукурук/чукурук-странник.PNG" data-weight="140 гр" data-price="200">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+																xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+													fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Чукурук/чукурук-тэйсти.PNG" alt="miniburger-5">
+							</div>
+							<div class="products-item-title">
+								Детский Тэйсти
+							</div>
+							<div class="products-item-text">
+								Куриная котлета, луковые кольца, сыр Паулиньо, помидор, пекинская капуста, соус Вышка, соус Медовый
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="22">200 ₽</div>
+									<div class="products-item-weight">140 гр</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="22" data-name="Детский Тэйсти" data-image="images/Чукурук/чукурук-тэйсти.PNG" data-weight="140 гр" data-price="200">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+																xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+													fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab tab-5">
+					<div class="products-items">
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Пиццы/DSC06928.png" alt="pizza-1">
+							</div>
+							<div class="products-item-title">
+								ЧИККЕН BBQ
+							</div>
+							<div class="products-item-text">
+								Курица, сыр Гауда, сыр Паулиньо, красный лук, укроп, соус Барбекю, соус Красный.
+								<br/>
+								<br/>
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+										<div class="products-item-price" data-base-price="23">850 ₽</div>
+										<div class="products-item-weight">860гр, 33см</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="23" data-name="ЧИККЕН BBQ" data-image="images/Пиццы/DSC06928.png" data-weight="860гр, 33см" data-price="850">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+																xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+													fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Пиццы/DSC06951.png" alt="pizza-2">
+							</div>
+							<div class="products-item-title">
+								НЕОПАЛИТАНО
+							</div>
+							<div class="products-item-text">
+								Ветчина, оливки, сыр Паулиньо и Гауда, сладкий перец, укроп, соус Перечный, соус Красный
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="24">690 ₽</div>
+									<div class="products-item-weight">790гр, 33см</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="24" data-name="НЕОПАЛИТАНО" data-image="images/Пиццы/DSC06951.png" data-weight="790гр, 33см" data-price="690">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Пиццы/DSC06968.png" alt="pizza-3">
+							</div>
+							<div class="products-item-title">
+								ГАВАЙСКАЯ
+							</div>
+							<div class="products-item-text">
+								Курица, ананас, сыр Гауда, сыр Паулиньо, укроп, соус Чесночный
+								<br/>
+								<br/>
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="25">720 ₽</div>
+									<div class="products-item-weight">820гр, 33см</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="25" data-name="ГАВАЙСКАЯ" data-image="images/Пиццы/DSC06968.png" data-weight="820гр, 33см" data-price="720">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Пиццы/DSC06989.png" alt="pizza-4">
+							</div>
+							<div class="products-item-title">
+								Пепперони
+							</div>
+							<div class="products-item-text">
+								колбаски пепперони, сыр гауда, сыр паулиньо, укроп, соус красный
+								<br/>
+								<br/>
+								<br/>
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="26">690 ₽</div>
+									<div class="products-item-weight">770гр, 33см</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="26" data-name="ПЕППЕРОНИ" data-image="images/Пиццы/DSC06989.png" data-weight="770гр, 33см" data-price="690">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Пиццы/DSC07105.png" alt="pizza-5">
+							</div>
+							<div class="products-item-title">
+								МАРГАРИТА
+							</div>
+							<div class="products-item-text">
+								Помидор, сыр Гауда, сыр Паулиньо, укроп, соус Красный
+								<br/>
+								<br/>
+								<br/>
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="27">690 ₽</div>
+									<div class="products-item-weight">730гр, 33см</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="27" data-name="МАРГАРИТА" data-image="images/Пиццы/DSC07105.png" data-weight="730гр, 33см" data-price="690">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Пиццы/mici.png" alt="pizza-6">
+							</div>
+							<div class="products-item-title">
+								МИКЕЛАНДЖЕЛО
+							</div>
+							<div class="products-item-text">
+								Колбаски пепперони, цукини, помидоры Черри, сыр Гауда, сыр Паулиньо, укроп, соус Красный, соус Азиатский
+								<br/>
+								<br/>
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="28">720 ₽</div>
+									<div class="products-item-weight">850гр, 33см</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="28" data-name="МИКЕЛАНДЖЕЛО" data-image="images/Пиццы/mici.png" data-weight="850гр, 33см" data-price="720">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Пиццы/эль диабло.png" alt="pizza-8">
+							</div>
+							<div class="products-item-title">
+								Эль-Диабло
+							</div>
+							<div class="products-item-text">
+								Нравится поострее? Тогда эта новинка создана именно для тебя. 
+								Эль Диабло - острая крафт-пицца с халапеньо и болгарским перцем на обжаренном с шрирачей говяжьем фарше с сыром. Все это заправляется соусом красный
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="29">790 ₽</div>
+									<div class="products-item-weight">820гр, 33см</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="29" data-name="ЭЛЬ-ДИАБЛО" data-image="images/Пиццы/эль диабло.png" data-weight="820гр, 33см" data-price="790">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Пиццы/карбонара.png" alt="pizza-9">
+							</div>
+							<div class="products-item-title">
+								Карбонара
+							</div>
+							<div class="products-item-text">
+								Знакомься c невероятной новинкой - Карбонара! Пицца со вкусом известной итальянской пасты - это кусочки бекона, сыра, яичного желтка в чесночном соусе под зеленью.
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<br/>
+									<div class="products-item-price" data-base-price="30">790 ₽</div>
+									<div class="products-item-weight">765гр, 33см</div>
+								</div>
+								<div class="products-item-action">
+									<br/>
+									<button class="button product-button" data-id="30" data-name="КАРБОНАРА" data-image="images/Пиццы/карбонара.png" data-weight="765гр, 33см" data-price="790">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab tab-11">
+					<div class="products-items">
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Мини-Пиццы/чукурук-чикен bbq.png" alt="mini-pizza-1">
+							</div>
+							<div class="products-item-title">
+								ЧИККЕН BBQ МИНИ
+							</div>
+							<div class="products-item-text">
+								Курица, сыр Гауда, сыр Паулиньо, красный лук, укроп, соус Барбекю, соус Красный.
+								<br/>
+								<br/>
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+										<div class="products-item-price" data-base-price="31">370 ₽</div>
+										<div class="products-item-weight">20см</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="31" data-name="ЧИККЕН BBQ МИНИ" data-image="images/Мини-Пиццы/чукурук-чикен bbq.png" data-weight="20см" data-price="370">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+																xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+													fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Мини-Пиццы/чукурук-микеланджело.png" alt="mini-pizza-2">
+							</div>
+							<div class="products-item-title">
+								МИКЕЛАНДЖЕЛО МИНИ
+							</div>
+							<div class="products-item-text">
+								колбаски пепперони, цукини, черри, сыр, укроп, соус красный, соус азиатский
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="32">390 ₽</div>
+									<div class="products-item-weight">20см</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="32" data-name="МИКЕЛАНДЖЕЛО МИНИ" data-image="images/Мини-Пиццы/чукурук-микеланджело.png" data-weight="20см" data-price="390">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Мини-Пиццы/чукурук-маргарита.png" alt="mini-pizza-3">
+							</div>
+							<div class="products-item-title">
+								МАРГАРИТА МИНИ
+							</div>
+							<div class="products-item-text">
+								помидор, сыр, укроп, соус красный
+								<br/>
+								<br/>
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="33">360 ₽</div>
+									<div class="products-item-weight">20см</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="33" data-name="МАРГАРИТА МИНИ" data-image="images/Мини-Пиццы/чукурук-маргарита.png" data-weight="20см" data-price="360">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+											</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				<div class="tab tab-7">
+					<div class="products-items">
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="" alt="ㅤ">
+							</div>
+							<div class="products-item-title">
+								БАБЛ ГАМ
+							</div>
+							<div class="products-item-text">
+								Сироп БАБЛ ГАМ, газированная вода, сладкий сироп, скитлз, лёд
+								<br/>
+								<br/>
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="34">300 ₽</div>
+									<div class="products-item-weight">360 мл</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="34" data-name="БАБЛ ГАМ" data-image="" data-weight="360 мл" data-price="300">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="" alt="ㅤ">
+							</div>
+							<div class="products-item-title">
+								МОХИТО
+							</div>
+							<div class="products-item-text">
+								Сироп мохито, лайм, мята, сладкий сироп, газированная вода, лёд
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="35">320 ₽</div>
+									<div class="products-item-weight">360 мл</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="35" data-name="МОХИТО" data-image="" data-weight="360 мл" data-price="320">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="" alt="ㅤ">
+							</div>
+							<div class="products-item-title">
+								ДЖУСИ ТРОПИК
+							</div>
+							<div class="products-item-text">
+								Сироп манго, сироп маракуйя, апельсиновый сок, лёд, газированная вода
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="36">250 ₽</div>
+									<div class="products-item-weight">360 мл</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="36" data-name="ДЖУСИ ТРОПИК" data-image="" data-weight="360 мл" data-price="250">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="" alt="ㅤ">
+							</div>
+							<div class="products-item-title">
+								АРБУЗНЫЙ ФРЕШ
+							</div>
+							<div class="products-item-text">
+								Арбузный сироп, клубничный сироп, лайм, мята, газированная вода, лёд
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="37">250 ₽</div>
+									<div class="products-item-weight">360 мл</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="37" data-name="АРБУЗНЫЙ ФРЕШ" data-image="" data-weight="360 мл" data-price="200">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="" alt="ㅤ">
+							</div>
+							<div class="products-item-title">
+								ЦИТРУСОВЫЙ
+							</div>
+							<div class="products-item-text">
+								Сироп мохито, лайм, мята, сладкий сироп, газированная вода, лёд
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="38">300 ₽</div>
+									<div class="products-item-weight">360 мл</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="38" data-name="ЦИТРУСОВЫЙ" data-image="" data-weight="360 мл" data-price="300">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="" alt="ㅤ">
+							</div>
+							<div class="products-item-title">
+								БЛЭКБЕРРИ
+							</div>
+							<div class="products-item-text">
+								Сироп мохито, лайм, мята, сладкий сироп, газированная вода, лёд
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="39">250 ₽</div>
+									<div class="products-item-weight">360 мл</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="39" data-name="БЛЭКБЕРРИ" data-image="" data-weight="360 мл" data-price="250">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="" alt="ㅤ">
+							</div>
+							<div class="products-item-title">
+								БЛЮ ФРЕШ
+							</div>
+							<div class="products-item-text">
+								Сироп мохито, лайм, мята, сладкий сироп, газированная вода, лёд
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="40">250 ₽</div>
+									<div class="products-item-weight">360 мл</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="40" data-name="БЛЮ ФРЕШ" data-image="" data-weight="360 мл" data-price="250">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="" alt="ㅤ">
+							</div>
+							<div class="products-item-title">
+								РЕД МОХИТО
+							</div>
+							<div class="products-item-text">
+								Сироп мохито, клубничный сироп, лайм, мята, лёд, газированная вода
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="41">320 ₽</div>
+									<div class="products-item-weight">360 мл</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="41" data-name="РЕД МОХИТО" data-image="" data-weight="360 мл" data-price="320">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab tab-8">
+					<div class="products-items">
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Смузи/DSC06013.png" alt="smoothies-1">
+							</div>
+							<div class="products-item-title">
+								<br/>
+								Киви-Яблоко
+							</div>
+							<div class="products-item-text">
+								Яблоко, банан, сироп киви, яблочный сок, лёд
+								<br/>
+								<br/>
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+										<div class="products-item-price" data-base-price="42">320 ₽</div>
+										<div class="products-item-weight">400 мл</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="42" data-name="Киви-Яблоко" data-image="images/Смузи/DSC06013.png" data-weight="400 мл" data-price="320">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+																xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+													fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Смузи/DSC06019.png" alt="smoothies-3">
+							</div>
+							<div class="products-item-title">
+								<br/>
+								Банан-Клубника
+							</div>
+							<div class="products-item-text">
+								Банан, клубника, клубничный сироп, апельсиновый сок, лёд
+								<br/>
+								<br/>
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="43">300 ₽</div>
+									<div class="products-item-weight">400 мл</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="43" data-name="Банан-Клубника" data-image="images/Смузи/DSC06019.png" data-weight="400 мл" data-price="300">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Смузи/DSC06023.png" alt="smoothies-4">
+							</div>
+							<div class="products-item-title">
+								<br/>
+								Love is
+							</div>
+							<div class="products-item-text">
+								Банан, клубника, клубничный сироп, баблгам сироп, персиковый сок, лёд
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="44">320 ₽</div>
+									<div class="products-item-weight">400 мл</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="44" data-name="Love is" data-image="images/Смузи/DSC06023.png" data-weight="400 мл" data-price="320">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Смузи/DSC06026.png" alt="smoothies-5">
+							</div>
+							<div class="products-item-title">
+								<br/>
+								Облепиха-Манго
+							</div>
+							<div class="products-item-text">
+								Облепиха, банан, манговый сироп, сладкий сироп, апельсиновый сок, лёд
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="45">320 ₽</div>
+									<div class="products-item-weight">400 мл</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="45" data-name="Облепиха-Манго" data-image="images/Смузи/DSC06026.png" data-weight="400 мл" data-price="320">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Смузи/DSC06063.png" alt="smoothies-6">
+							</div>
+							<div class="products-item-title">
+								<br/>
+								Ягодный
+							</div>
+							<div class="products-item-text">
+								Чёрная смородина, брусника, банан, клубничный сироп, яблочный сок, лёд
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="46">320 ₽</div>
+									<div class="products-item-weight">400 мл</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="46" data-name="Ягодный" data-image="images/Смузи/DSC06063.png" data-weight="400 мл" data-price="320">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Смузи/DSC06066.png" alt="smoothies-7">
+							</div>
+							<div class="products-item-title">
+								<br/>
+								Экзотика
+							</div>
+							<div class="products-item-text">
+								Манго, банан, сироп маракуйя, апельсиновый сок, лёд
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="47">290 ₽</div>
+									<div class="products-item-weight">400 мл</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="47" data-name="Экзотика" data-image="images/Смузи/DSC06066.png" data-weight="400 мл" data-price="290">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab tab-4">
+					<div class="products-items">
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Фрайсы/веселый ричи.png" alt="fries-1">
+							</div>
+							<div class="products-item-title">
+								Веселый Ричи
+							</div>
+							<div class="products-item-text">
+								Курица в хрустящей панировке, деревенский картофель Айдахо, сыр Паулиньо, соус Терияки
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="48">520 ₽</div>
+									<div class="products-item-weight">300 гр</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="48" data-name="Веселый Ричи" data-image="images/Фрайсы/веселый ричи.png" data-weight="300 гр" data-price="520">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Фрайсы/ленивый стен.png" alt="fries-2">
+							</div>
+							<div class="products-item-title">
+								Ленивый Стен
+							</div>
+							<div class="products-item-text">
+								Бекон, картофель фри, сыр Паулиньо, соус Терияки.
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="49>500 ₽</div>
+									<div class="products-item-weight">320 гр</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="49" data-name="Ленивый Стен" data-image="images/Фрайсы/ленивый стен.png" data-weight="320 гр" data-price="500">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Фрайсы/сладкий чак.png" alt="fries-3">
+							</div>
+							<div class="products-item-title">
+								Сладкий Чак
+							</div>
+							<div class="products-item-text">
+								Курица в хрустящей панировке, картофель фри, сыр Паулиньо, соус Sweet Chili 
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="50">540 ₽</div>
+									<div class="products-item-weight">400 гр</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="50" data-name="Сладкий Чак" data-image="images/Фрайсы/сладкий чак.png" data-weight="400 гр" data-price="540">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab tab-6">
+					<div class="products-items">
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/снэки/lukolca.png" alt="snacks-1">
+							</div>
+							<div class="products-item-title">
+								Луковые Кольца
+							</div>
+							<div class="products-item-text">
+								Луковые кольца в хрустящей панировке
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="51">220 ₽</div>
+									<div class="products-item-weight">150 гр</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="51" data-name="Луковые Кольца" data-image="images/снэки/lukolca.png" data-weight="220 гр" data-price="520">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/снэки/nagetsu.png" alt="snacks-2">
+							</div>
+							<div class="products-item-title">
+								Нагетсы 10 штук
+							</div>
+							<div class="products-item-text">
+								Куриное филе в хрустящей панировке
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="52">380 ₽</div>
+									<div class="products-item-weight">230 гр</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="52" data-name="Нагетсы 10 штук" data-image="images/снэки/nagetsu.png" data-weight="230 гр" data-price="380">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/снэки/nagetsu.png" alt="snacks-5">
+							</div>
+							<div class="products-item-title">
+								Нагетсы 7 штук
+							</div>
+							<div class="products-item-text">
+								Куриное филе в хрустящей панировке
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="53">280 ₽</div>
+									<div class="products-item-weight">160 гр</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="53" data-name="Нагетсы 7 штук" data-image="images/снэки/nagetsu.png" data-weight="160 гр" data-price="280">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/снэки/nagetsu.png" alt="snacks-4">
+							</div>
+							<div class="products-item-title">
+								Нагетсы 5 штук
+							</div>
+							<div class="products-item-text">
+								Куриное филе в хрустящей панировке
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="54">210 ₽</div>
+									<div class="products-item-weight">115 гр</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="54" data-name="Нагетсы 5 штук" data-image="images/снэки/nagetsu.png" data-weight="115 гр" data-price="210">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/снэки/potatofri.png" alt="snacks-3">
+							</div>
+							<div class="products-item-title">
+								Картошка Фри
+							</div>
+							<div class="products-item-text">
+								Кусочки картофеля, ожаренные во фритюре
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="55">180 ₽</div>
+									<div class="products-item-weight">100 гр</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="55" data-name="Картошка Фри" data-image="images/снэки/potatofri.png" data-weight="100 гр" data-price="180">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/снэки/idaho.png" alt="snacks-4">
+							</div>
+							<div class="products-item-title">
+								Айдахо
+							</div>
+							<div class="products-item-text">
+								Картофельные дольки
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="56">220 ₽</div>
+									<div class="products-item-weight">150 гр</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="56" data-name="Айдахо" data-image="images/снэки/idaho.png" data-weight="150 гр" data-price="220">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab tab-9">
+					<div class="products-items">
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Фирменные/Грушевый_DSC08513.png" alt="branded-1">
+							</div>
+							<div class="products-item-title">
+								Грушевый
+							</div>
+							<div class="products-item-text">
+								Освежающий, красивый и с отличным вкусом компот из груши и сливы
+								<br/>
+								<br/>
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="57">220 ₽</div>
+									<div class="products-item-weight">500 мл</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="57" data-name="Грушевый" data-image="images/Фирменные/Грушевый_DSC08513.png" data-weight="500 мл" data-price="220">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Фирменные/Лимонадный_DSC08500.png" alt="branded-2">
+							</div>
+							<div class="products-item-title">
+								Лимонад
+							</div>
+							<div class="products-item-text">
+								Освежающий лимонад на основе лимонада!
+								<br/>
+								<br/>
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="58">250 ₽</div>
+									<div class="products-item-weight">500 мл</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="58" data-name="Лимонад" data-image="images/Фирменные/Лимонадный_DSC08500.png" data-weight="500 мл" data-price="250">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Фирменные/Морс_DSC08523.png" alt="branded-3">
+							</div>
+							<div class="products-item-title">
+								Морс
+							</div>
+							<div class="products-item-text">
+								Пополняем запас витаминов вместе с морсом от Вышки! Его главный ингредиент - натуральная брусника!
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="59">170 ₽</div>
+									<div class="products-item-weight">500 мл</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="59" data-name="Морс" data-image="images/Фирменные/Морс_DSC08523.png" data-weight="500 мл" data-price="170">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Фирменные/Яблочный_DSC08484.png" alt="branded-4">
+							</div>
+							<div class="products-item-title">
+								Яблочный
+							</div>
+							<div class="products-item-text">
+								Домашний компот на основе яблока и винограда!
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="60">220 ₽</div>
+									<div class="products-item-weight">500 мл</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="60" data-name="Яблочный" data-image="images/Фирменные/Яблочный_DSC08484.png" data-weight="500 мл" data-price="220">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab tab-12">
+					<div class="products-items">
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="" alt="tea-1">
+							</div>
+							<div class="products-item-title">
+								Облепиховый
+							</div>
+							<div class="products-item-text">
+								
+								<br/>
+								<br/>
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="61">360 ₽</div>
+									<div class="products-item-weight">500 мл</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="61" data-name="Облепиховый Чай" data-image="" data-weight="500 мл" data-price="360">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="" alt="tea-2">
+							</div>
+							<div class="products-item-title">
+								Малиновый
+							</div>
+							<div class="products-item-text">
+								
+								<br/>
+								<br/>
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="62">360 ₽</div>
+									<div class="products-item-weight">500 мл</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="62" data-name="Малиновый Чай" data-image="" data-weight="500 мл" data-price="360">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="" alt="tea-3">
+							</div>
+							<div class="products-item-title">
+								Цитрусовый
+							</div>
+							<div class="products-item-text">
+								
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="63">360 ₽</div>
+									<div class="products-item-weight">500 мл</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="63" data-name="Цитрусовый Чай" data-image="" data-weight="500 мл" data-price="360">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="" alt="tea-4">
+							</div>
+							<div class="products-item-title">
+								Ягодный
+							</div>
+							<div class="products-item-text">
+								
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="64">360 ₽</div>
+									<div class="products-item-weight">500 мл</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="64" data-name="Ягодный Чай" data-image="" data-weight="500 мл" data-price="360">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="" alt="tea-4">
+							</div>
+							<div class="products-item-title">
+								Смородиновый
+							</div>
+							<div class="products-item-text">
+								
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="65">360 ₽</div>
+									<div class="products-item-weight">500 мл</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="65" data-name="Смородиновый Чай" data-image="" data-weight="500 мл" data-price="360">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab tab-10">
+					<div class="products-items">
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Разливные/sprite.png" alt="draftdrinks-1">
+							</div>
+							<div class="products-item-title">
+								Спрайт
+							</div>
+							<div class="products-item-text">
+								
+								<br/>
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+										<div class="products-item-price" data-base-price="66">120 ₽</div>
+										<div class="products-item-weight">360 мл</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="66" data-name="Спрайт" data-image="images/Разливные/sprite.png" data-weight="360 мл" data-price="120">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+																xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+													fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Разливные/cola.png" alt="draftdrinks-2">
+							</div>
+							<div class="products-item-title">
+								Кола
+							</div>
+							<div class="products-item-text">
+								
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="67">120 ₽</div>
+									<div class="products-item-weight">360 мл</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="67" data-name="Кола" data-image="images/Разливные/cola.png" data-weight="360 мл" data-price="120">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Разливные/fanta.png" alt="draftdrinks-3">
+							</div>
+							<div class="products-item-title">
+								Фанта
+							</div>
+							<div class="products-item-text">
+								
+								<br/>
+								<br/>
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="68">120 ₽</div>
+									<div class="products-item-weight">360 мл</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="68" data-name="Фанта" data-image="images/Разливные/fanta.png" data-weight="360 мл" data-price="120">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Разливные/мультифрукт.png" alt="draftdrinks-4">
+							</div>
+							<div class="products-item-title">
+								Мультифрукт
+								</div>
+							<div class="products-item-text">
+								
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="69">120 ₽</div>
+									<div class="products-item-weight">360 мл</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="69" data-name="Мультифрукт" data-image="images/Разливные/мультифрукт.png" data-weight="360 мл" data-price="120">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Разливные/яблочный.png" alt="draftdrinks-5">
+							</div>
+							<div class="products-item-title">
+								Яблочный
+							</div>
+							<div class="products-item-text">
+								
+								<br/>
+								<br/>
+								<br/>
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="70">120 ₽</div>
+									<div class="products-item-weight">360 мл</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="70" data-name="Яблочный" data-image="images/Разливные/яблочный.png" data-weight="360 мл" data-price="120">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Разливные/апельсиновый.png" alt="draftdrinks-6">
+							</div>
+							<div class="products-item-title">
+								Апельсиновый
+							</div>
+							<div class="products-item-text">
+								
+								<br/>
+								<br/>
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="71">120 ₽</div>
+									<div class="products-item-weight">360 мл</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="71" data-name="Апельсиновый" data-image="images/Разливные/апельсиновый.png" data-weight="360 мл" data-price="120">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="products-item">
+							<div class="products-item-image">
+								<img src="images/Разливные/персиковый.png" alt="draftdrinks-7">
+							</div>
+							<div class="products-item-title">
+								Персиковый
+							</div>
+							<div class="products-item-text">
+								
+							</div>
+							<div class="products-item-extra">
+								<div class="products-item-info">
+									<div class="products-item-price" data-base-price="72">120 ₽</div>
+									<div class="products-item-weight">360 мл</div>
+								</div>
+								<div class="products-item-action">
+									<button class="button product-button" data-id="72" data-name="Персиковый" data-image="images/Разливные/персиковый.png" data-weight="360 мл" data-price="120">
+										<span>В Корзину</span>
+										<span> <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 18.5C17.5304 18.5 18.0391 18.7107 18.4142 19.0858C18.7893 19.4609 19 19.9696 19 20.5C19 21.0304 18.7893 21.5391 18.4142 21.9142C18.0391 22.2893 17.5304 22.5 17 22.5C16.4696 22.5 15.9609 22.2893 15.5858 21.9142C15.2107 21.5391 15 21.0304 15 20.5C15 19.39 15.89 18.5 17 18.5ZM1 2.5H4.27L5.21 4.5H20C20.2652 4.5 20.5196 4.60536 20.7071 4.79289C20.8946 4.98043 21 5.23478 21 5.5C21 5.67 20.95 5.84 20.88 6L17.3 12.47C16.96 13.08 16.3 13.5 15.55 13.5H8.1L7.2 15.13L7.17 15.25C7.17 15.3163 7.19634 15.3799 7.24322 15.4268C7.29011 15.4737 7.3537 15.5 7.42 15.5H19V17.5H7C6.46957 17.5 5.96086 17.2893 5.58579 16.9142C5.21071 16.5391 5 16.0304 5 15.5C5 15.15 5.09 14.82 5.24 14.54L6.6 12.09L3 4.5H1V2.5ZM7 18.5C7.53043 18.5 8.03914 18.7107 8.41421 19.0858C8.78929 19.4609 9 19.9696 9 20.5C9 21.0304 8.78929 21.5391 8.41421 21.9142C8.03914 22.2893 7.53043 22.5 7 22.5C6.46957 22.5 5.96086 22.2893 5.58579 21.9142C5.21071 21.5391 5 21.0304 5 20.5C5 19.39 5.89 18.5 7 18.5ZM16 11.5L18.78 6.5H6.14L8.5 11.5H16Z"
+											  fill="#191411"/></svg>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="container">
+			<div class="logo">
+				<img src="images/vishka-logo.png" alt="Logo">
+			</div>
+			<div class="rights">Все права защищены</div>
+		</div>
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+	<script src="scripts/cart.js"></script>
+	<script src="scripts/script.js"></script>
+
+</body>
+</html>
